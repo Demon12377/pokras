@@ -2,18 +2,19 @@
 name = "pokras"
 version = "0.1.0"
 description = ""
-authors = [""]
+authors = ["Jules <jules@example.com>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.11"
-discord-py = "^2.5.2"
 dotenv = "^0.9.9"
 sqlalchemy = "^2.0.42"
 pillow = "^11.3.0"
 alembic = "^1.16.4"
 webcolors = "^24.11.1"
 pydantic = "^2.11.7"
+fastapi = "^0.111.0"
+uvicorn = "^0.29.0"
 
 
 [tool.poetry.group.dev.dependencies]
