@@ -2,6 +2,17 @@ from fastapi import FastAPI
 from fastapi.responses import HTMLResponse
 from fastapi.staticfiles import StaticFiles
 from pathlib import Path
+# from pokras.db.base import Base
+# from pokras.db.engine import engine
+
+# # Import all the models so that they are registered with SQLAlchemy's metadata
+# from pokras.modules.game.models.game import Game
+# from pokras.modules.country.models.country import Country
+# from pokras.modules.roll.models.tile import Tile
+# from pokras.modules.roll.models.last_roll import LastRoll
+
+# # Create the database tables
+# Base.metadata.create_all(bind=engine)
 
 app = FastAPI()
 
