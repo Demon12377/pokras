@@ -3,12 +3,12 @@ from typing import Optional, TYPE_CHECKING
 from sqlalchemy import UniqueConstraint, String, ForeignKey
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 
-from db.base import Base
-from modules.roll.service.base.models.gamestate_things import TileState
+from pokras.db.base import Base
+from pokras.modules.roll.service.base.models.gamestate_things import TileState
 
 if TYPE_CHECKING:
-    from modules.game.models.game import Game
-    from modules.country.models.country import Country
+    from pokras.modules.game.models.game import Game
+    from pokras.modules.country.models.country import Country
 
 
 class Tile(Base):

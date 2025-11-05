@@ -3,12 +3,12 @@ from typing import TYPE_CHECKING
 from sqlalchemy import UniqueConstraint, String, ForeignKey
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 
-from db.base import Base
-from modules.roll.service.base.models.gamestate_things import CountryState
+from pokras.db.base import Base
+from pokras.modules.roll.service.base.models.gamestate_things import CountryState
 
 if TYPE_CHECKING:
-    from modules.game.models.game import Game
-    from modules.roll.models.tile import Tile
+    from pokras.modules.game.models.game import Game
+    from pokras.modules.roll.models.tile import Tile
 
 
 class Country(Base):
@@ -22,6 +22,9 @@ class Country(Base):
     name: Mapped[str] = mapped_column(String(50), nullable=False)
     color: Mapped[str] = mapped_column(String(7), nullable=False)
     creator_id: Mapped[int] = mapped_column(nullable=False)
+    industrial: Mapped[int] = mapped_column(nullable=False, default=0)
+    military: Mapped[int] = mapped_column(nullable=False, default=0)
+    economic: Mapped[int] = mapped_column(nullable=False, default=0)
 
     game_id: Mapped[int] = mapped_column(ForeignKey("game.id", ondelete="CASCADE"), nullable=False)
 

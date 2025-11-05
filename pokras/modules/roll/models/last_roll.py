@@ -4,11 +4,11 @@ from typing import TYPE_CHECKING
 from sqlalchemy import UniqueConstraint, ForeignKey
 from sqlalchemy.orm import mapped_column, Mapped, relationship
 
-from db.base import Base
-from db.datetime_utc import DatetimeUTC
+from pokras.db.base import Base
+from pokras.db.datetime_utc import DatetimeUTC
 
 if TYPE_CHECKING:
-    from modules.game.models.game import Game
+    from pokras.modules.game.models.game import Game
     from dataclasses import dataclass as dataclass_sql
 else:
     def dataclass_sql(cls):
