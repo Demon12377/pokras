@@ -5,14 +5,14 @@ from sqlalchemy import Boolean, String, Interval
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 from sqlalchemy.types import Enum
 
-from db.base import Base
-from modules.game.models.choices.game_map import GameMap
-from modules.roll.service.base.models.gamestate_things import GameState
+from pokras.db.base import Base
+from pokras.modules.game.models.choices.game_map import GameMap
+from pokras.modules.roll.service.base.models.gamestate_things import GameState
 
 if TYPE_CHECKING:
-    from modules.country.models.country import Country
-    from modules.roll.models.tile import Tile
-    from modules.roll.models.last_roll import LastRoll
+    from pokras.modules.country.models.country import Country
+    from pokras.modules.roll.models.tile import Tile
+    from pokras.modules.roll.models.last_roll import LastRoll
 
 
 class Game(Base):
