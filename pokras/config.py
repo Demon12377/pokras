@@ -29,7 +29,12 @@ class ConnectionConfig:
 class Paths:
     BASE = Path(__file__).parent.parent.resolve()
     PROJECT_ROOT = BASE / "pokras"
-    SQLITE_DB = BASE / "db.sqlite"
+
+    # Use the /tmp directory for the database on Vercel, otherwise use a local file
+    if getenv("VERCEL"):
+        SQLITE_DB = Path("/tmp") / "db.sqlite"
+    else:
+        SQLITE_DB = BASE / "db.sqlite"
 
     RESOURCES = BASE / "resources"
     MAPS = RESOURCES / "maps"
