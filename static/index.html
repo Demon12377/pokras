@@ -6,6 +6,13 @@
 </head>
 <body>
     <h1>Vercel Game</h1>
+    <form id="colorize-form">
+        <label for="territory-input">Territory ID:</label>
+        <input id="territory-input" type="text" name="territory" placeholder="e.g., GR1" required>
+        <label for="color-input">Color:</label>
+        <input id="color-input" type="color" name="color" value="#FF0000" required>
+        <button type="submit">Colorize</button>
+    </form>
     <div id="map-container"></div>
     <script src="/static/script.js"></script>
 </body>
